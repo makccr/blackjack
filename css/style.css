@@ -93,7 +93,7 @@ button.disabled-button, button.secondary.disabled-button {
 }
 
 .card {
-	transition: all 3s;
+	transition: all 0s;
 	display: inline-block;
 	background-color: none !important;
 	border-radius: 12.5px;
@@ -201,7 +201,7 @@ table {
 
 /* For whenever split hand state is engaged, we will scale decks up and down */
 .splithand-scaledown {
-	transition: all 1s;
+	transition: all 0s;
 	transform: scale(.75);
 	left: -80px;
 	margin-right: -40px;

@@ -1,69 +1,20 @@
-/* Animations for card dealing based on location */
-/* TO DO: Add webkit keyframes also */
+/* All animations and transitions removed for instant updates */
 
-@keyframes deal-player {
-	0% {
-		transform: translate(-90px, -150px);
-	}
-	50% {
-		transform: translate(-50px, -50px);
-	}
-	100% {
-		transform: translate(0, 0);
-  	}
-}
+/* Disable any keyframes */
+@keyframes none {}
 
-@keyframes deal-player-split {
-	0% {
-		transform: translate(-90px, -450px);
-	}
-	50% {
-		transform: translate(-50px, -150px);
-	}
-	100% {
-		transform: translate(0, 0);
-  	}
-}
-
-@keyframes deal-dealer {
-	0% {
-		transform: translate(-100px, 0px);
-	}
-	50% {
-		transform: translate(-50px, 0px);
-	}
-	100% {
-		transform: translate(0, 0);
-  	}
-}
-
-@keyframes dealer-cardflip {
-	0% {
-		transform: rotateY(25deg);
-	}
-	50% {
-		transform: rotateY(100deg);
-	}
-	100% {
-		transform: none;
-  	}
-}
-
-
-/* Card animations called using keyframes */
-/* Animation angle different for each */
-#dealer .card {
-	animation: deal-dealer .25s linear;
-}
-
-#user-hand .card {
-	animation: deal-player .5s linear;
-}
-
+/* Card placement: instant, no movement */
+#dealer .card,
+#user-hand .card,
 #user-split-hand .card {
-	animation: deal-player-split .5s linear;
+	transform: none !important;
+	animation: none !important;
+	transition: none !important;
 }
 
+/* Flipped card: instant flip, no animation */
 #dealer .card.flipped {
-	animation: dealer-cardflip .25s linear;
+	transform: none !important;
+	animation: none !important;
+	transition: none !important;
 }
